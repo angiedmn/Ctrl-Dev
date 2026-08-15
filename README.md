@@ -11,7 +11,7 @@ Built with vanilla HTML, CSS, and JavaScript — no frameworks, no backend, no b
 ---
 
 ## 🌐 Live Demo (GitHub Pages)
-https://angiedmn.github.io/Ctrl-Dev/
+https://angiedmn.github.io/ctrl-dev/
 
 ---
 
