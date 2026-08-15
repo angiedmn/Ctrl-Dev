@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Registrations | Ctrl+Dev 2026</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</head>
+<body>
+    <video class="video-background" autoplay muted loop playsinline>
+        <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="dull-container">
+        <!-- Navbar -->
+        <nav class="glass focus-target">
+            <div id="auth-nav-slot">
+                <button id="login-btn" class="cta-btn" style="padding: 0.4rem 1.2rem; font-size: 0.9rem;">Login</button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="register.html" target="_blank">Registration</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <!-- Theme toggle moved to dropdown, handled in JS -->
+                <a href="index.html" class="logo spin-text" style="text-decoration: none; color: var(--text-color);"><strong>Ctrl+Dev</strong></a>
+            </div>
+        </nav>
+
+        <main>
+            <section class="glass focus-target content-section" id="registrations-container" style="padding: 3rem 2rem;">
+                <h2 class="spin-text" style="margin-bottom: 2rem; text-align: center;">My Registered Events</h2>
+                
+                <div class="events-grid" id="registrations-grid">
+                    <!-- Javascript will populate registration cards here -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="glass focus-target footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="spin-text">Ctrl+Dev 2026</h3>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="events.html">Events</a>
+                    <a href="register.html">Registration</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/angiedmn" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/angel-dhiman-676467374/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

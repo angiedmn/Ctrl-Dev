@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Ctrl+Dev 2026</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</head>
+<body>
+    <video class="video-background" autoplay muted loop playsinline>
+        <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="dull-container">
+        <!-- Navbar -->
+        <nav class="glass focus-target">
+            <div id="auth-nav-slot">
+                <button id="login-btn" class="cta-btn" style="padding: 0.4rem 1.2rem; font-size: 0.9rem;">Login</button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html" style="font-weight: 800;">Events</a>
+                <a href="register.html" target="_blank">Registration</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button id="theme-toggle" class="theme-icon-btn" title="Toggle Theme">🌓</button>
+                <a href="index.html" class="logo spin-text" style="text-decoration: none; color: var(--text-color);"><strong>Ctrl+Dev</strong></a>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Featured Event Spotlight -->
+            <section class="content-section focus-target" style="margin-top: 2rem;">
+                <div class="glass featured-event-card" style="display: flex; flex-wrap: wrap; gap: 2rem; padding: 2rem; align-items: center;">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80" alt="Web3 Summit" style="flex: 1; min-width: 300px; border-radius: 12px; object-fit: cover; height: 300px;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <span class="category" style="background: rgba(107, 114, 128, 0.12); color: var(--primary-color); padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 600; font-size: 0.8rem; text-transform: uppercase;">Featured Spotlight</span>
+                        <h2 class="spin-text" style="font-size: 2.5rem; margin: 1rem 0;">Web3 Summit Opening Keynote</h2>
+                        <p style="color: var(--secondary-color); margin-bottom: 1.5rem; font-size: 1.1rem;">Join the biggest minds in decentralized technology as they unveil the roadmap for the next generation of the internet. Limited seating available.</p>
+                        <a href="register.html?event=1" class="cta-btn">Secure Your Spot</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="glass focus-target content-section" id="search" style="padding: 2rem;">
+                <h2 class="spin-text" style="margin-bottom: 2rem; text-align: center;">Discover Events</h2>
+                
+                <div class="events-controls focus-target">
+                    <input type="text" id="search-event" placeholder="Search events by name...">
+                    <select id="filter-category">
+                        <option value="all">All Categories</option>
+                        <option value="AI/ML">AI/ML</option>
+                        <option value="Data">Data</option>
+                        <option value="Blockchain">Blockchain</option>
+                        <option value="Security">Security</option>
+                        <option value="Management">Management</option>
+                        <option value="Web Dev">Web Dev</option>
+                    </select>
+                </div>
+
+                <div class="events-grid" id="events-grid">
+                    <!-- Javascript will populate cards here -->
+                </div>
+            </section>
+
+            <!-- Past Events Section -->
+            <section class="content-section focus-target" style="text-align: center;">
+                <h2 class="spin-text section-title">Our Past Successes</h2>
+                <div class="events-grid opacity-75">
+                    <div class="event-card glass">
+                        <span class="category">2025</span>
+                        <h3>Global Youth Tech Summit</h3>
+                        <p>Hosted top youth leaders in New Delhi for policy and tech innovation.</p>
+                    </div>
+                    <div class="event-card glass">
+                        <span class="category">2025</span>
+                        <h3>EY Techathon 6.0</h3>
+                        <p>Massive turnout for enterprise tech solutions and case studies.</p>
+                    </div>
+                    <div class="event-card glass">
+                        <span class="category">2024</span>
+                        <h3>GirlScript Summer of Code</h3>
+                        <p>Contributed to incredible open-source projects globally.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Venue & Location -->
+            <section class="content-section focus-target glass" style="padding: 2rem; display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 class="spin-text section-title" style="margin-bottom: 1rem;">Venue Location</h2>
+                    <p style="margin-bottom: 1rem; color: var(--secondary-color);">Ctrl+Dev 2026 will be hosted across multiple prestigious venues to accommodate our diverse tracks.</p>
+                    <ul style="list-style: none; color: var(--text-color); line-height: 2;">
+                        <li><strong>Main Stage:</strong> IISc Bangalore Convention Center</li>
+                        <li><strong>Hackathon Hub:</strong> IIIT Hyderabad Campus</li>
+                        <li>Parking available on-site for VIP ticket holders.</li>
+                    </ul>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px; height: 250px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--card-shadow);">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3891461159384!2d77.564531874914!3d13.012001587307223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae166299b8d23b%3A0x6ceea978cb350b32!2sIndian%20Institute%20of%20Science!5e0!3m2!1sen!2sin!4v1709643440939!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; filter: grayscale(15%) contrast(1.05);" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="glass focus-target footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="spin-text">Ctrl+Dev 2026</h3>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="events.html">Events</a>
+                    <a href="register.html">Registration</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/angeldhiman" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/angeldhiman" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

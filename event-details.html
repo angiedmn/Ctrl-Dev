@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details | Ctrl+Dev</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</head>
+<body>
+    <video class="video-background" autoplay muted loop playsinline>
+        <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="dull-container">
+        <!-- Navbar -->
+        <nav class="glass focus-target">
+            <div id="auth-nav-slot">
+                <button id="login-btn" class="cta-btn" style="padding: 0.4rem 1.2rem; font-size: 0.9rem;">Login</button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="register.html" target="_blank">Registration</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button id="theme-toggle" class="theme-icon-btn" title="Toggle Theme">🌓</button>
+                <a href="index.html" class="logo spin-text" style="text-decoration: none; color: var(--text-color);"><strong>Ctrl+Dev</strong></a>
+            </div>
+        </nav>
+
+        <main id="event-detail-content" class="content-section" style="margin-top: 2rem;">
+            <!-- JavaScript will dynamically inject the event details here -->
+        </main>
+
+        <!-- Footer -->
+        <footer class="glass focus-target footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="spin-text">Ctrl+Dev</h3>
+                    <p>India's Premier Tech Event Discovery Platform.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="events.html">Events</a>
+                    <a href="register.html">Registration</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/angeldhiman" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/angeldhiman" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

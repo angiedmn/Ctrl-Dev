@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Ctrl+Dev 2026</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</head>
+<body>
+    <video class="video-background" autoplay muted loop playsinline>
+        <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="dull-container">
+        <!-- Navbar -->
+        <nav class="glass focus-target">
+            <div id="auth-nav-slot">
+                <button id="login-btn" class="cta-btn" style="padding: 0.4rem 1.2rem; font-size: 0.9rem;">Login</button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html" target="_blank">Events</a>
+                <a href="register.html" style="font-weight: 800;">Registration</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button id="theme-toggle" class="theme-icon-btn" title="Toggle Theme">🌓</button>
+                <a href="index.html" class="logo spin-text" style="text-decoration: none; color: var(--text-color);"><strong>Ctrl+Dev</strong></a>
+            </div>
+        </nav>
+
+        <main>
+            <div class="register-layout">
+                <!-- Sidebar: What's Included -->
+                <aside class="register-sidebar glass focus-target">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">What's Included?</h3>
+                    <div class="tier">
+                        <h4>Student Pass (Free)</h4>
+                        <p>Access to all main stage talks, networking lounges, and digital swag bag.</p>
+                    </div>
+                    <div class="tier">
+                        <h4>General Admission (₹1,499)</h4>
+                        <p>Full event access, hands-on workshops, hackathon entry, and catered lunches.</p>
+                    </div>
+                    <div class="tier">
+                        <h4>VIP Access (₹2,999)</h4>
+                        <p>Everything in GA, plus speaker meet-and-greets, VIP parking, and exclusive dinner.</p>
+                    </div>
+                    <hr style="border: none; border-top: 1px solid var(--border-color); margin: 2rem 0;">
+                    <p style="font-size: 0.9rem; color: var(--secondary-color);">Need help? Reach out to <a href="mailto:support@ctrldev.com" style="color: var(--primary-color);">support</a>.</p>
+                </aside>
+
+                <!-- Main Form -->
+                <div class="registration-container glass focus-target">
+                    <h2 class="spin-text" style="text-align: center; margin-bottom: 2rem;">Event Registration</h2>
+                    
+                    <form id="registration-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="student@university.edu" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="college">College / University</label>
+                            <input type="text" id="college" placeholder="University Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-select">Select Event</label>
+                            <select id="event-select" required>
+                                <option value="" disabled selected>Choose an event to attend...</option>
+                                <option value="1">Web3 Summit</option>
+                                <option value="2">AI Engineering Hackathon</option>
+                                <option value="3">Data Science & Supabase</option>
+                                <option value="4">CyberSec 101</option>
+                                <option value="5">Project Management Bootcamp</option>
+                                <option value="6">React India</option>
+                            </select>
+                        </div>
+                        <button type="submit" style="margin-top: 1rem;">Confirm Registration</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Registration FAQ -->
+            <section class="content-section focus-target" style="max-width: 800px; margin: 0 auto;">
+                <h2 class="spin-text section-title" style="text-align: center;">Registration FAQ</h2>
+                <div class="faq-accordion glass">
+                    <details>
+                        <summary>What payment methods are accepted?</summary>
+                        <p>We accept all major credit cards (Visa, Mastercard, Amex), PayPal, and UPI.</p>
+                    </details>
+                    <details>
+                        <summary>Are there group discounts available?</summary>
+                        <p>Yes! Groups of 5 or more receive an automatic 15% discount at checkout. Contact support for larger university groups.</p>
+                    </details>
+                    <details>
+                        <summary>Can I modify my registration later?</summary>
+                        <p>You can update your personal details or transfer your ticket to another person up to 7 days before the event starts.</p>
+                    </details>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="glass focus-target footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="spin-text">Ctrl+Dev 2026</h3>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="events.html">Events</a>
+                    <a href="register.html">Registration</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/angiedmn" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/angel-dhiman-676467374/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

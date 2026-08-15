@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ctrl+Dev</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</head>
+<body>
+    <video class="video-background" autoplay muted loop playsinline>
+        <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="dull-container">
+        <!-- Navbar -->
+        <nav class="glass focus-target">
+            <div id="auth-nav-slot">
+                <button id="login-btn" class="cta-btn" style="padding: 0.4rem 1.2rem; font-size: 0.9rem;">Login</button>
+            </div>
+            
+            <div class="nav-links">
+                <a href="index.html" style="font-weight: 800;">Home</a>
+                <a href="events.html">Events</a>
+                <a href="register.html">Registration</a>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button id="theme-toggle" class="theme-icon-btn" title="Theme"></button>
+                <a href="index.html" class="logo spin-text" style="text-decoration: none; color: var(--text-color);"><strong>Ctrl+Dev</strong></a>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Hero Layout -->
+            <section class="hero-container focus-target" id="hero-scroll-container">
+                <div class="cursor-glow" id="cursor-glow"></div>
+                <div class="hero-track" id="hero-track">
+                    <div class="hero-slide glass focus-target">
+                        <div class="hero-slide-content">
+                            <h1 class="spin-text" style="font-size: 3.5rem; margin-bottom: 0.5rem;">Discover Tech</h1>
+                            
+                            <div class="countdown-pill glass" id="event-countdown" style="display: inline-block; padding: 0.5rem 1.5rem; border-radius: 30px; margin-bottom: 1rem; color: var(--primary-color); font-weight: 600; font-size: 0.9rem;">
+                                Loading countdown...
+                            </div>
+
+                            <p style="font-size: 1.2rem; color: var(--secondary-color); margin-bottom: 1.5rem;">India's premier platform for discovering and registering for top tech events, hackathons, and summits.</p>
+                            <a href="events.html" class="cta-btn">Explore Platform</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-dots" id="slider-dots"></div>
+            </section>
+
+            <!-- Platform Stats Bar -->
+            <section class="content-section focus-target">
+                <div class="stats-grid">
+                    <div class="glass stat-card">
+                        <h3 class="spin-text">150K+</h3>
+                        <p>Active Users</p>
+                    </div>
+                    <div class="glass stat-card">
+                        <h3 class="spin-text">420+</h3>
+                        <p>Events Hosted</p>
+                    </div>
+                    <div class="glass stat-card">
+                        <h3 class="spin-text">85+</h3>
+                        <p>Partner Colleges</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Use Ctrl+Dev -->
+            <section class="content-section focus-target" style="text-align: center;">
+                <h2 class="spin-text section-title">Why Use Ctrl+Dev?</h2>
+                <div class="three-col-grid">
+                    <div class="glass feature-card">
+                        <h3>One-Click Register</h3>
+                        <p>Save your profile details once and register for hackathons and summits instantly without repetitive forms.</p>
+                    </div>
+                    <div class="glass feature-card">
+                        <h3>Verified Events</h3>
+                        <p>Every event on our platform is vetted for quality, ensuring you only spend time on high-impact opportunities.</p>
+                    </div>
+                    <div class="glass feature-card">
+                        <h3>Exclusive Discounts</h3>
+                        <p>Platform members get exclusive early-bird access and student discounts to premium industry conferences.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="content-section focus-target" style="text-align: center;">
+                <h2 class="spin-text section-title">Trusted by Students & Professionals</h2>
+                <div class="three-col-grid">
+                    <div class="glass testimonial-card">
+                        <p>"Ctrl+Dev makes finding quality hackathons so easy. I found my last three team members through events listed here."</p>
+                        <h4>- Rahul M., IIIT Hyderabad</h4>
+                    </div>
+                    <div class="glass testimonial-card">
+                        <p>"As an event organizer, listing on Ctrl+Dev boosted our registrations by 300%. The community is highly engaged."</p>
+                        <h4>- Sneha P., Organizer</h4>
+                    </div>
+                    <div class="glass testimonial-card">
+                        <p>"The single dashboard to manage all my event tickets and schedules is a lifesaver. Highly recommend."</p>
+                        <h4>- Arjun K., Developer</h4>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="glass focus-target footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="spin-text">Ctrl+Dev</h3>
+                    <p>India's Premier Tech Event Discovery Platform.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="events.html">Events</a>
+                    <a href="register.html">Registration</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/angiedmn" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/angel-dhiman-676467374/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
