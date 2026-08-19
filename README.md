@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/logo.png" alt="Ctrl+Dev logo" width="400">
-</p>
-
 # Ctrl+Dev 🚀
 
 **Tech Event Discovery Platform** — a fully client-side web app for discovering, registering for, and managing tech events, hackathons, and summits.
